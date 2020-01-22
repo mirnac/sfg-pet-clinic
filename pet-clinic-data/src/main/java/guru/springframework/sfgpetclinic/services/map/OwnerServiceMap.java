@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.Set;
 
 @Service
-public class OwnerServiceMap  extends AbstractMapService<Owner,Long> implements OwnserService {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnserService {
 
     @Override
     public Set<Owner> findAll() {
