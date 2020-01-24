@@ -2,7 +2,7 @@ package guru.springframework.sfgpetclinic.bootstrap;
 
 import guru.springframework.sfgpetclinic.model.Owner;
 import guru.springframework.sfgpetclinic.model.Vet;
-import guru.springframework.sfgpetclinic.services.OwnserService;
+import guru.springframework.sfgpetclinic.services.OwnerService;
 import guru.springframework.sfgpetclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -10,11 +10,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class DataLoader implements CommandLineRunner {
 
-    private final OwnserService ownserService;
+    private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader(OwnserService ownserService, VetService vetService) {
-        this.ownserService = ownserService;
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
         this.vetService = vetService;
     }
 
@@ -24,7 +24,7 @@ public class DataLoader implements CommandLineRunner {
         Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
-        ownserService.save(owner1);
+        ownerService.save(owner1);
 
         System.out.println("Loading owners...");
 
